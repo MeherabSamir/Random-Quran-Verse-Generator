@@ -14,7 +14,7 @@
     --clr-white: #ffffff;
     --heading-font: 'Poppins', sans-serif;
     --bengali-font: 'Hind Siliguri', sans-serif;
-    --arabic-font: 'Markazi Text', serif;
+    --arabic-font: 'Uthman Naskh','Markazi Text', serif;
 }
 
 *{
@@ -35,6 +35,10 @@ span
     padding: .3rem 0.75rem;
     border-radius: 20px;
     font-family: var(--heading-font);
+    transition: .2s;
+    &:active{
+        transform: scale(0.95);
+    }
 }
 
 body{
@@ -76,7 +80,7 @@ main{
             font-weight: 600;
         }
         .arabic-ayah{
-            font-family: 'Uthman Naskh';
+            font-family: var(--arabic-font);
             font-weight: 600;
         }
         .sura-info{
@@ -88,17 +92,25 @@ main{
                 vertical-align: middle;
             }
             .twitter-share{
+                @extend .btn;
                 color: var(--clr-blue);
                 font-size: 16px;
                 margin-right: 15px;
                 i{
                     font-size: 22px;
                 }
+                &:hover{
+                    background-color: rgba(54, 144, 255, 0.2);
+                }
             }
             .btn-play {
                 @extend .btn;
                 color: var(--clr-black);
                 background: var(--clr-yellow);
+                &:hover{
+                    -webkit-box-shadow: 0px 0px 5px 0px #1c1c1c28; 
+                    box-shadow: 0px 0px 5px 0px rgba(28, 28, 28,0.3);
+                }
             }
         }
     }
@@ -112,15 +124,19 @@ main{
         i{
             margin-right: 5px;
             transform: rotate(0);
+            animation: spin 1.3s linear infinite;
+            animation-play-state: running;
         }
-        &:hover{
-            i{
-                transform: rotate(360deg);
+        &:hover i{
+            animation-play-state: paused;
+        }
+        @keyframes spin {
+            from {
+              transform: rotate(0deg);
             }
-            box-shadow: 0;
-        }
-        &:active{
-            transform: scale(0.95);
+            to {
+              transform: rotate(360deg);
+            }
         }
     }
 }
@@ -137,6 +153,26 @@ footer{
             &:hover{
                 text-decoration: none;
             }
+        }
+    }
+}
+
+/* Responsive Query */
+ 
+/* SM Small Device :550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    main{
+        .container{
+            margin: 0 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        text-align: center;
+        .container{
+            margin: 0 20px;
         }
     }
 }

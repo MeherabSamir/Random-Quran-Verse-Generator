@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Markazi+Text:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
-
 @font-face {
   font-family: 'Uthman Naskh';
   src: local("KFGQPC Uthman Taha Naskh"), url(https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff2/UthmanTN1%20Ver10.woff2) format("woff2"), url(https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff/UthmanTN1%20Ver10.woff) format("woff");
@@ -12,7 +11,7 @@
   --clr-white: #ffffff;
   --heading-font: 'Poppins', sans-serif;
   --bengali-font: 'Hind Siliguri', sans-serif;
-  --arabic-font: 'Markazi Text', serif;
+  --arabic-font: 'Uthman Naskh','Markazi Text', serif;
 }
 
 * {
@@ -27,11 +26,16 @@ span {
   text-decoration: none;
 }
 
-.btn, main .container .buttons .btn-play, main .btn-generate {
+.btn, main .container .buttons .twitter-share, main .container .buttons .btn-play, main .btn-generate {
   font-size: 16px;
   padding: .3rem 0.75rem;
   border-radius: 20px;
   font-family: var(--heading-font);
+  transition: .2s;
+}
+
+.btn:active, main .container .buttons .twitter-share:active, main .container .buttons .btn-play:active, main .btn-generate:active {
+  transform: scale(0.95);
 }
 
 body {
@@ -76,7 +80,7 @@ main .container .bangla-ayah {
 }
 
 main .container .arabic-ayah {
-  font-family: 'Uthman Naskh';
+  font-family: var(--arabic-font);
   font-weight: 600;
 }
 
@@ -99,9 +103,17 @@ main .container .buttons .twitter-share i {
   font-size: 22px;
 }
 
+main .container .buttons .twitter-share:hover {
+  background-color: rgba(54, 144, 255, 0.2);
+}
+
 main .container .buttons .btn-play {
   color: var(--clr-black);
   background: var(--clr-yellow);
+}
+
+main .container .buttons .btn-play:hover {
+  box-shadow: 0px 0px 5px 0px rgba(28, 28, 28, 0.3);
 }
 
 main .btn-generate {
@@ -114,18 +126,21 @@ main .btn-generate {
 main .btn-generate i {
   margin-right: 5px;
   transform: rotate(0);
-}
-
-main .btn-generate:hover {
-  box-shadow: 0;
+  animation: spin 1.3s linear infinite;
+  animation-play-state: running;
 }
 
 main .btn-generate:hover i {
-  transform: rotate(360deg);
+  animation-play-state: paused;
 }
 
-main .btn-generate:active {
-  transform: scale(0.95);
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 footer {
@@ -142,4 +157,21 @@ footer p a {
 
 footer p a:hover {
   text-decoration: none;
+}
+
+/* Responsive Query */
+/* SM Small Device :550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  main .container {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    text-align: center;
+  }
+  main .container {
+    margin: 0 20px;
+  }
 }

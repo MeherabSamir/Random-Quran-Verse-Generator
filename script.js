@@ -19,8 +19,8 @@ generateBtn.addEventListener('click',()=>{
 })
 
 // Fetching API
-const arabicApi = `https://api.alquran.cloud/v1/ayah/${randomNum}/ar.alafasy`
-const banglaApi = `https://api.alquran.cloud/v1/ayah/${randomNum}/bn.bengali`
+const arabicApi = `http://api.alquran.cloud/v1/ayah/${randomNum}/ar.alafasy`
+const banglaApi = `http://api.alquran.cloud/v1/ayah/${randomNum}/bn.bengali`
 
 
 const arabic = fetch(arabicApi).then(blob => blob.json()).then(data => {
@@ -30,6 +30,7 @@ const arabic = fetch(arabicApi).then(blob => blob.json()).then(data => {
     console.log(data.data)
     const audioUrl = data.data.audio
     audio.src = audioUrl
+    tweet.setAttribute('href',`https://twitter.com/intent/tweet/?text=${data.data.text}`)
 })
 
 const bangla = fetch(banglaApi).then(blob => blob.json()).then(data => {
