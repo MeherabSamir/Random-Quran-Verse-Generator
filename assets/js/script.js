@@ -19,8 +19,8 @@ const randomNum = generateRandomNum()
 
 
 // Fetching API
-const arabicApi = `http://api.alquran.cloud/v1/ayah/${randomNum}/ar.alafasy`
-const banglaApi = `http://api.alquran.cloud/v1/ayah/${randomNum}/bn.bengali`
+const arabicApi = `https://api.alquran.cloud/v1/ayah/${randomNum}/ar.alafasy`
+const banglaApi = `https://api.alquran.cloud/v1/ayah/${randomNum}/bn.bengali`
 
 const arabic = fetch(arabicApi)
                 .then(blob => blob.json())
