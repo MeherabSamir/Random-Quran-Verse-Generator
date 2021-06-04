@@ -13,7 +13,7 @@ const suraInfo = document.querySelector('.sura-info')
 
 // Random Number
 function generateRandomNum(){
-    return Math.floor(Math.random() * 6236)
+    return Math.floor(Math.random() * 6)
 }
 const randomNum = generateRandomNum()
 
