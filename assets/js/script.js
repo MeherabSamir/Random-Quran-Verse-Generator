@@ -29,7 +29,6 @@ const arabic = fetch(arabicApi)
                     suraName.textContent = `${data.data.surah.englishName}`
                     ayahNum.textContent = `${data.data.numberInSurah}`
                     audio.src = data.data.audio
-                    console.log(data)
                 })
 
 const bangla = fetch(banglaApi)
