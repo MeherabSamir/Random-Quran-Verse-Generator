@@ -17,10 +17,22 @@
     --arabic-font: 'Uthman Naskh','Markazi Text', serif;
 }
 
+::selection{
+    background: var(--clr-black);
+    color: var(--clr-yellow);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-weight: 400;
+    background: var(--clr-yellow);
+    color: var(--clr-black);
+    font-family: var(--heading-font);
 }
 
 a,
@@ -41,22 +53,28 @@ span
     }
 }
 
-body{
-    font-weight: 400;
-    background: var(--clr-yellow);
-    color: var(--clr-black);
-    font-family: 'Poppins';
-}
 
+/* Main Styles */
 main{
-    position: relative;
-    top: 50px;
+    // position: relative;
+    // top: 50px;
     text-align: center;
+    padding: 25px 0;
     .heading{
         h1{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+        p{
+            a{
+                color: var(--clr-black);
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
         }
     }
+
     .btn-play,
     .bangla-ayah,
     .arabic-ayah,
@@ -64,33 +82,41 @@ main{
     {
         margin-top: 20px;
     }
+
     .container{
         position: relative;
         left:50%;
+        margin: 20px 0;
         transform: translateX(-50%);
         background: var(--clr-white);
         max-width: 700px;
+        max-height: 600px;
         border-radius: 10px;
         text-align: center;
         padding: 25px 20px;
         -webkit-box-shadow: 0px 0px 5px 0px #1c1c1c28; 
         box-shadow: 0px 0px 5px 0px rgba(28, 28, 28,0.3);
+
         .bangla-ayah{
             font-family: var(--bengali-font);
             font-weight: 600;
         }
+
         .arabic-ayah{
             font-family: var(--arabic-font);
             font-weight: 600;
         }
+
         .sura-info{
             font-family: var(--bengali-font);
         }
+
         .buttons{
             i{
                 margin-right: 5px;
                 vertical-align: middle;
             }
+
             .twitter-share{
                 @extend .btn;
                 color: var(--clr-blue);
@@ -103,6 +129,7 @@ main{
                     background-color: rgba(54, 144, 255, 0.2);
                 }
             }
+
             .btn-play {
                 @extend .btn;
                 color: var(--clr-black);
@@ -118,7 +145,6 @@ main{
         @extend .btn;
         background: var(--clr-black);
         color: var(--clr-yellow);
-        margin-top: 20px;
         -webkit-box-shadow: 0px 0px 10px 0px #1c1c1c28; 
         box-shadow: 0px 0px 10px 0px rgba(28, 28, 28,0.3);
         i{
@@ -140,39 +166,18 @@ main{
         }
     }
 }
-
-footer{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10px;
-    p{
-        a{
-            color: var(--clr-black);
-            text-decoration: underline;
-            &:hover{
-                text-decoration: none;
-            }
-        }
-    }
-}
-
-/* Responsive Query */
  
 /* SM Small Device :550px. */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    main{
-        .container{
-            margin: 0 20px;
-        }
-    }
-}
 
 @media only screen and (max-width: 600px) {
+    .heading{
+        h1{
+            font-size: 28px;
+        }
+    }
     main{
-        text-align: center;
         .container{
-            margin: 0 20px;
+            margin-right: 50px;
         }
     }
 }

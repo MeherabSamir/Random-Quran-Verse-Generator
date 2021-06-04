@@ -14,10 +14,22 @@
   --arabic-font: 'Uthman Naskh','Markazi Text', serif;
 }
 
+::selection {
+  background: var(--clr-black);
+  color: var(--clr-yellow);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  background: var(--clr-yellow);
+  color: var(--clr-black);
+  font-family: var(--heading-font);
 }
 
 a,
@@ -38,21 +50,23 @@ span {
   transform: scale(0.95);
 }
 
-body {
-  font-weight: 400;
-  background: var(--clr-yellow);
-  color: var(--clr-black);
-  font-family: 'Poppins';
-}
-
+/* Main Styles */
 main {
-  position: relative;
-  top: 50px;
   text-align: center;
+  padding: 25px 0;
 }
 
 main .heading h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+main .heading p a {
+  color: var(--clr-black);
+  text-decoration: underline;
+}
+
+main .heading p a:hover {
+  text-decoration: none;
 }
 
 main .btn-play,
@@ -65,9 +79,11 @@ main .sura-info {
 main .container {
   position: relative;
   left: 50%;
+  margin: 20px 0;
   transform: translateX(-50%);
   background: var(--clr-white);
   max-width: 700px;
+  max-height: 600px;
   border-radius: 10px;
   text-align: center;
   padding: 25px 20px;
@@ -119,7 +135,6 @@ main .container .buttons .btn-play:hover {
 main .btn-generate {
   background: var(--clr-black);
   color: var(--clr-yellow);
-  margin-top: 20px;
   box-shadow: 0px 0px 10px 0px rgba(28, 28, 28, 0.3);
 }
 
@@ -143,35 +158,12 @@ main .btn-generate:hover i {
   }
 }
 
-footer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
-}
-
-footer p a {
-  color: var(--clr-black);
-  text-decoration: underline;
-}
-
-footer p a:hover {
-  text-decoration: none;
-}
-
-/* Responsive Query */
 /* SM Small Device :550px. */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  main .container {
-    margin: 0 20px;
-  }
-}
-
 @media only screen and (max-width: 600px) {
-  main {
-    text-align: center;
+  .heading h1 {
+    font-size: 28px;
   }
   main .container {
-    margin: 0 20px;
+    margin-right: 50px;
   }
 }

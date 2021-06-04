@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quran Verse Generator</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
-</head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random Quran Verse Generator</title>
+	<!-- Required Social Preview MetaTags -->
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Random Quran Verse Generator" />
+    <meta name="description" content="Random Quran Verse Generator is a website where you can generate random Quran verse.Designed & developed with love by Meherab Samir." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/MeherabSamir" />
+    <meta property="og:title" content="Random Quran Verse Generator" />
+    <meta property="og:description" content="Random Quran Verse Generator is a website where you can generate random Quran verse.Designed & developed with love by Meherab Samir." />
+    <meta property="og:image" content="assets/img/twitter-card.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://github.com/MeherabSamir" />
+    <meta property="twitter:title" content="Random Quran Verse Generator" />
+    <meta property="twitter:description" content="Random Quran Verse Generator is a website where you can generate random Quran verse.Designed & developed with love by Meherab Samir." />
+    <meta property="twitter:image" content="assets/img/twitter-card.svg" />
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+	<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+	<!-- CSS Here -->
+	<link rel="stylesheet" href="assets/css/style.css"> </head>
+
 <body>
-    <main>
-        <div class="heading">
-            <h1>Random quran verse generator!</h1>
-        </div>
-        <div class="container">
-            <h2 class="arabic-ayah"></h2>
-            <h3 class="bangla-ayah"></h3>
-            <span class="sura-info">
-                আল কুরআন • সুরা - <span class="sura-name"></span>
-                • আয়াত - <span class="ayah-number"></span> </span>
-            <div class="buttons">
-                <audio src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3"></audio>  
-                <a href="#" class="twitter-share" target="_blank"><i class="fab fa-twitter"></i>Tweet</a>
-                <a href="#" class="btn-play"><i class="fas fa-play"></i>Play</a>
-            </div>
-        </div>
-        <a href="#" class="btn-generate"><i class="fas fa-cog"></i>Generate</a>
-    </main>
-
-    <footer>
-        <p>Made With &#10084;&#65039; By <a href="https://github.com/MeherabSamir" target="_blank">Meherab Samir</a> </p>
-    </footer>
-
-
-    <script src="script.js"></script>
-
+	<main>
+		<div class="heading">
+			<h1>Random quran verse generator!</h1>
+			<p> Made With &#10084;&#65039; By <a href="https://github.com/MeherabSamir" target="_blank">Meherab Samir</a> </p>
+		</div>
+		<div class="container">
+			<h2 class="arabic-ayah"></h2>
+			<h3 class="bangla-ayah"></h3> <span class="sura-info">
+                আল কুরআন • সুরা - <span class="sura-name"></span> • আয়াত - <span class="ayah-number"></span> </span>
+			<div class="buttons">
+				<audio src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3"></audio> <a href="#" class="twitter-share" target="_blank"><i class="fab fa-twitter"></i>Tweet</a> <a href="#" class="btn-play"><i class="fas fa-play"></i>Play</a> </div>
+		</div> <a href="#" class="btn-generate"><i class="fas fa-cog"></i>Generate</a> </main>
+	<!-- JS Here -->
+	<script src="assets/js/script.js"></script>
 </body>
+
 </html>
