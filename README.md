@@ -6,6 +6,10 @@ Tecnologies Used
 - CSS
 - JAVASCRIPT 
 
+Learning Outcome
+- Working with API
+- Javascript Fetch API
+
 Special Credit
 - [Quran.com][Quran.com]
 - [Alquran.cloud][Al-Quran.cloud]
